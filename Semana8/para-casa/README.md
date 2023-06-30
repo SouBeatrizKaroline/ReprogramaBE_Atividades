@@ -1,0 +1,30 @@
+# Exercício de Casa 🏠 
+
+## Filmes Ghibli
+
+- Crie seu servidor e uma rota padrão
+
+- Realize as importações e requisições necessarias
+
+- Crie um rota  **GET** que liste todos os filmes Ghibli;
+
+- Crie rotas **GET** que possibilite buscar filme pelo título, id e pelo diretor;
+
+- Devo conseguir cadastrar novos filme com uma rota **POST**
+---
+
+Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
+
+- [x] Fiz o fork do repositório
+
+- [x] Clonei o fork na minha máquina (`git clone url-do-meu-fork`)
+
+- [x] Resolvi o exercício
+
+- [x] Adicionei as mudanças. (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
+
+- [x] Commitei a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
+
+- [x] Pushei os commits na minha branch (`git push origin nome-da-branch`)
+
+- [x] Criei um Pull Request

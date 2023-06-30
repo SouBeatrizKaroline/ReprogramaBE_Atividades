@@ -1,0 +1,11 @@
+{
+  "name": "para-casa",
+  "version": "1.0.0",
+  "description": "Cafeteria",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Beatriz",
+  "license": "ISC"
+}

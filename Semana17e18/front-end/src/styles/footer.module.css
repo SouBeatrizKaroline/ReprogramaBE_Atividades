@@ -1,0 +1,13 @@
+.footerContainer {
+    padding: 5px;
+    background: #340447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footerText {
+    color: azure;
+    font-size: 24px;
+    text-align: center;
+  }

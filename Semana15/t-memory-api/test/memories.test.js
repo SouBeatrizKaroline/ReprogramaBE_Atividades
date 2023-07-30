@@ -1,0 +1,51 @@
+const memoryModel = require("../src/models/memoryModel")
+
+describe("GET model test", () => {
+    const memory = memoryModel({
+        "title": "memória teste",
+        "date": "2022-07-01T17:42:09.375Z",
+        "description": "uma memória implantada para teste",
+        "category": "testes",
+        "imgURL": "http://www.imagem.com",
+        "timelineID": "62bf30a95bd3be0daadb34f3",
+        "archived": true
+    })
+    it("Deve chamar o Schema e retornar o nome correto da memória", () => {
+        expect(memory.title).toBe("memória teste");
+    });
+    it("Deve chamar o Schema e retornar a data certa da memória", () => {
+        expect(JSON.stringify(memory.date).substring(1, (JSON.stringify(memory.date)).length - 1)).toBe("2022-07-01T17:42:09.375Z")
+    });
+    it("Deve chamar o schema e retornar a descrição correta da memória", () => {
+        expect(memory.description).toBe("uma memória implantada para teste")
+    });
+    it("Deve chamar o Schema e retornar a categoria correta da memória", () => {
+        expect(memory.category).toStrictEqual(["testes"])
+    });
+    it("Deve chamar o Schema e retornar a url da imagem correta da memória", () => {
+        expect(memory.imgURL).toBe("http://www.imagem.com")
+    });
+    it("Deve chamar o Schema e retornar o id de timeline correta da memória", () => {
+        expect(JSON.stringify(memory.timelineID).substring(1, ((JSON.stringify(memory.timelineID)).length - 1))).toBe("62bf30a95bd3be0daadb34f3")
+    });
+    it("Deve chamar o Schema e retornar o valor arquivado com verdadeiro", () => {
+        expect(memory.archived).toBe(true)
+    });
+})
+
+describe("CREATE route test", () => {
+    const memory = new memoryModel({
+        "title": "memória teste",
+        "date": "2022-07-01T17:42:09.3752",
+        "description": "uma memória implantada para testes",
+        "category": "testes",
+        "imgURL": "https://www.image.com",
+        "timelineID": "62bf30a95bd3be0daadb34f3",
+        "archived": true
+    })
+    it("Deve salvar no banco de dados a nova memória", () => {
+        memory.save().then(dados) => {
+            expect(dados.title).toBe("memória teste")
+        }
+    })
+})
